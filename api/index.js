@@ -1,8 +1,6 @@
 const express = require("express");
-
 // CORS
 const cors = require("cors");
-
 const app = express();
 
 // DOTENV CONFIG
@@ -16,12 +14,15 @@ mongoConnect();
 // PORT
 const PORT = process.env.PORT;
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
-app.post("/api", (req, res) => {
-  console.log("Hello World");
+// ROUTES
+app.get("/", (req, res) => {
+  res.send("Hello World");
 });
+
+app.use("/", require("./src/routes/user.js"));
 
 app.listen(PORT, (err) => {
   if (err) {
@@ -30,3 +31,5 @@ app.listen(PORT, (err) => {
     console.log(`Server running on https://localhost:${PORT}`);
   }
 });
+
+module.exports = app;

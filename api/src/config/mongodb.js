@@ -6,13 +6,13 @@ const mongoConnect = () => {
   mongoose.connect(process.env.MONGODB_URL, {
     // useNewUrlParser: true, // digunakan agar URL di config.env bisa terbaca. Soalnya dulu URLnya tidak sependek ini. jadi kode ini diperlukan
     // useUnifiedTopology: true,
-    // useCreateIndex: true
+    // useCreateIndex: true,
   });
 
   const db = mongoose.connection;
 
   // 3 event yang bisa terjadi
-  db.on("connection", () => {
+  db.on("connected", () => {
     console.log("Connected to MongoDB Database! 🎉");
   });
   db.on("error", () => {
