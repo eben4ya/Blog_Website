@@ -5,12 +5,12 @@ const Form = ({ title = "" }) => {
         {title}
       </h1>
       <input
-        className="mb-[5px] block w-[100%] rounded-[5px] border-[2px] border-solid border-[#ddd] bg-white px-[7px] py-[5px]"
+        className="mb-[5px] block w-[100%] rounded-[5px] border-[2px] border-solid border-[#ddd] bg-white px-[7px] py-[5px] text-black"
         type="text"
         placeholder="username"
       />
       <input
-        className="mb-[5px] block w-[100%] rounded-[5px] border-[2px] border-solid border-[#ddd] bg-white px-[7px] py-[5px]"
+        className="mb-[5px] block w-[100%] rounded-[5px] border-[2px] border-solid border-[#ddd] bg-white px-[7px] py-[5px] text-black"
         type="text"
         placeholder="password"
       />
