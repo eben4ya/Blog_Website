@@ -1,5 +1,7 @@
+import Form from "../Form/Form";
+
 const LoginPage = () => {
-  return <section>ini login page</section>;
+  return <Form title="Login" />;
 };
 
 export default LoginPage;
